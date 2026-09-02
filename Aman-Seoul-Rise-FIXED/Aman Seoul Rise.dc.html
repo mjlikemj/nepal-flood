@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ext-resource-dependency" content="./assets/aman-empty.jpg" data-resource-id="plateEmpty" />
+<meta name="ext-resource-dependency" content="./assets/aman-seoul.jpg" data-resource-id="plateFull" />
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/organic-a5bcaf9d-feff-4f60-8005-d727ae8ffde7/styles.css">
+  <script src="_ds/organic-a5bcaf9d-feff-4f60-8005-d727ae8ffde7/_ds_bundle.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;500&display=swap">
+  <script>window.OM_SCENES = '[{"name":"Skyline","dur":3.2,"desc":"The Cheongdam-dong skyline at dusk with the site still empty; a dashed envelope draws up where the tower will stand"},{"name":"Rise","dur":7,"desc":"The tower builds floor by floor from the base while the camera follows the glowing construction edge upward"},{"name":"Crown","dur":2.4,"desc":"The crown block lands, the guides flash out and the finished tower holds"},{"name":"Reveal","dur":4.4,"desc":"The camera pulls back to the full frame and the title settles in"}]';</script>
+  <script>window.OM_PLAYBACK = '{"mode":"times","count":1}';</script>
+  <script>window.TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{"floors":38,"guides":true,"title":false,"motionEditor":true}/*EDITMODE-END*/;</script>
+  <style>
+    body { margin: 0; background: #f5ead8; }
+    a { color: #a85c2c; } a:hover { color: #c67139; }
+  </style>
+</helmet>
+<x-import component-from-global-scope="AmanApp" from="./animations-v3.jsx ./tweaks-panel.jsx ./aman-rise.jsx" hint-size="100%,100%"></x-import>
+</x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#f5ead8">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#f5ead8"/>
+    <rect x="520" y="180" width="160" height="500" fill="#c67139"/>
+    <rect x="700" y="380" width="90" height="300" fill="#d9a877"/>
+    <rect x="410" y="470" width="90" height="210" fill="#d9a877"/>
+    <rect x="500" y="150" width="200" height="8" fill="#a85c2c"/>
+  </svg>
+</template>
+</body>
+</html>
