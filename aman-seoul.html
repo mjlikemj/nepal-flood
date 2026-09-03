@@ -5,9 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>아만 서울, 청담동에 들어서다</title>
 <meta name="robots" content="noindex">
-<style>html,body{margin:0;padding:0;background:#f4efe8;overflow-x:hidden}body{-webkit-text-size-adjust:100%}</style>
+<style>html,body{margin:0;padding:0;background:#f4efe8;overflow-x:hidden}body{-webkit-text-size-adjust:100%}
+#fsbtn{position:fixed;right:10px;top:10px;z-index:100000;padding:7px 12px;border:1px solid rgba(255,255,255,.45);border-radius:999px;background:rgba(0,0,0,.55);color:#fff;font:700 11px/1 Arial,"Noto Sans KR",sans-serif;letter-spacing:.05em;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+#fsbtn:hover{background:rgba(0,0,0,.8)}</style>
 </head>
 <body>
+<button id="fsbtn" type="button">전체화면</button>
 <style>
 .as-root{all:initial;display:block;box-sizing:border-box;width:100%;max-width:680px;margin:0 auto;background:#f4efe8;color:#181614;font-family:Arial,"Noto Sans KR",sans-serif;font-size:16px;line-height:1.4;text-align:left;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .as-root *,.as-root *::before,.as-root *::after{box-sizing:border-box;margin:0;padding:0}
@@ -112,5 +115,14 @@ update();
 })();
 </script>
 
+<script>
+(function(){var b=document.getElementById('fsbtn');if(!b)return;
+b.addEventListener('click',function(){var d=document;
+if(!d.fullscreenElement&&!d.webkitFullscreenElement){var e=d.documentElement;
+(e.requestFullscreen||e.webkitRequestFullscreen||function(){}).call(e);}
+else{(d.exitFullscreen||d.webkitExitFullscreen||function(){}).call(d);}});
+function sync(){var on=document.fullscreenElement||document.webkitFullscreenElement;b.textContent=on?'닫기':'전체화면';}
+document.addEventListener('fullscreenchange',sync);document.addEventListener('webkitfullscreenchange',sync);})();
+</script>
 </body>
 </html>
